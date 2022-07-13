@@ -1,0 +1,2 @@
+Completed Trainings:
+	BasicFindTargetVer2_1_Finished  - Can find Target with help of raycasts.
