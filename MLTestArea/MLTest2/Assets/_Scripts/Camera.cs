@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Camera : MonoBehaviour{
 
-    [SerializeField] Transform target;
+    [SerializeField] float speed;
     void Update(){
-        transform.LookAt(target);
+        transform.position+= new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical")) * (Time.deltaTime * speed);
     }
 }

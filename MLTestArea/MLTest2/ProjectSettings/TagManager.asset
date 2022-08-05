@@ -9,6 +9,8 @@ TagManager:
   - Obstacle
   - Ship
   - Agent
+  - HiveAgent
+  - Reward
   layers:
   - Default
   - TransparentFX

@@ -1,2 +1,3 @@
 Completed Trainings:
 	BasicFindTargetVer2_1_Finished  - Can find Target with help of raycasts.
+	BasicFindTargetVer2_Obstacles_10 - Finished simple obstacles. - Moving on to more obstacles

@@ -18,9 +18,12 @@ public class MoveToGoalAgent : Agent{
 
     public override void OnEpisodeBegin(){
        
-        transform.localPosition = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
-        targetTransform.localPosition = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
+        
         agentRigidbody.velocity = Vector3.zero;
+       
+       transform.localPosition = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
+        targetTransform.localPosition = new Vector3(Random.Range(-10, 10), 0, Random.Range(-10, 10));
+        
         if (willRandomizeObstacle){
             foreach (var obstacle in Obstacles){
                 obstacle.localRotation = Quaternion.Euler(0,Random.Range(0,360),0);
