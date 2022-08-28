@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TechDemo.unity
+    path: Assets/Scenes/ProjectHandin/TechDemo.unity
     guid: 8c383ec70bf806f4fb8681e89d3ca836
   m_configObjects: {}

@@ -12,8 +12,8 @@ public class Propeller : MonoBehaviour{
    
    public void SetThrottle(float input, float speed){
       Debug.Log("SetThrottle: " + input);
-      rb.velocity+= transform.up* input* speed* Time.deltaTime;
-      
+     // rb.velocity+= transform.up* input* speed* Time.deltaTime;
+      rb.AddForce(transform.up* input* speed* Time.deltaTime);
    }
 
    public void ResetVelocity(){

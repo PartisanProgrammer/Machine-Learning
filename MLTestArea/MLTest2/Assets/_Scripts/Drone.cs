@@ -11,7 +11,7 @@ public class Drone : Agent{
     [SerializeField] List<Propeller> propellers;
     [SerializeField] Transform targetTransform;
     [SerializeField] float speed = 0.5f;
-    [SerializeField] Rigidbody rigidbody;
+    [SerializeField] new Rigidbody rigidbody;
 
     void Awake(){
         rigidbody = GetComponent<Rigidbody>();
@@ -64,13 +64,16 @@ public class Drone : Agent{
 
     public override void Heuristic(in ActionBuffers actionsOut){
         ActionSegment<float> continuousActions = actionsOut.ContinuousActions;
-        continuousActions[0] = Input.GetAxisRaw("Horizontal");
-        continuousActions[1] = Input.GetAxisRaw("2");
-        continuousActions[2] = Input.GetAxisRaw("3");
-        continuousActions[3] = Input.GetAxisRaw("4");
-        // continuousActions[1] = Input.GetKey(KeyCode.Alpha2) ? 1 : 0;
-        // continuousActions[2] = Input.GetKey(KeyCode.Alpha3) ? 1 : 0;
-        // continuousActions[3] = Input.GetKey(KeyCode.Alpha4) ? 1 : 0;
+        // continuousActions[0] = Input.GetAxisRaw("Horizontal");
+        // continuousActions[1] = Input.GetAxisRaw("2");
+        // continuousActions[2] = Input.GetAxisRaw("3");
+        // continuousActions[3] = Input.GetAxisRaw("4");
+        //
+        
+        continuousActions[0] = Input.GetKey(KeyCode.Alpha1) ? 1 : 0;
+        continuousActions[1] = Input.GetKey(KeyCode.Alpha2) ? 1 : 0;
+        continuousActions[2] = Input.GetKey(KeyCode.Alpha3) ? 1 : 0;
+        continuousActions[3] = Input.GetKey(KeyCode.Alpha4) ? 1 : 0;
            
     }
    

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
+using Unity.MLAgents.Policies;
 using Unity.MLAgents.Sensors;
 using Random = UnityEngine.Random;
 
@@ -30,7 +31,8 @@ public class MoveToGoalAgent : Agent{
                 obstacle.localPosition = new Vector3(Random.Range(-20, 20), 0, Random.Range(-20, 20));
             }
         }
-      
+
+        var id = this.GetComponent<BehaviorParameters>().TeamId;
     }
     
 
